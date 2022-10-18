@@ -2,7 +2,7 @@
   "name": "kl-compiler-in-kl",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./build/index.js",
   "scripts": {
     "build": "node build/index.js --path ./src --output ./build",
     "start": "node build/index.js --file",
@@ -17,5 +17,5 @@
     "glob": "^8.0.3",
     "yargs": "^17.6.0"
   },
-  "bin": "./src/build/index.js"
+  "bin": "./build/index.js"
 }
