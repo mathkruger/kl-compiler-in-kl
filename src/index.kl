@@ -1,0 +1,87 @@
+#!/usr/bin/env node
+
+KASINAO fs É CHAMA require ABRE"fs"FECHA;
+KASINAO fse É CHAMA require ABRE"fs-extra"FECHA;
+KASINAO yargs É CHAMA require ABRE"yargs"FECHA;
+KASINAO highlight É CHAMA require ABRE"cli-highlight"FECHA->highlight
+KASINAO glob É CHAMA require ABRE"glob"FECHA;
+KASINAO path É CHAMA require ABRE"path"FECHA;
+
+KASINAO parse É require ABRE "./functions/parse" FECHA;
+KASINAO execute É require ABRE "./functions/execute" FECHA;
+
+KASINAO input É yargs->argv;
+KASINAO FILE É input->file;
+KASINAO PATH É input->path;
+KASINAO OUTPUT É input->output;
+KASINAO DEBUG É input->debug ÉÉÉ "true" || input->debug ÉÉÉ VERDADE;
+KASINAO IS_PROJECT É !FILE && PATH;
+
+KASINAO getDirectories É SABADAÇO ABRE extension, src, callback FECHA BOA NOITE
+    CHAMA glob ABRE src SOMAE "/**/*." SOMAE extension, callback FECHA;
+BOA TARDE;
+
+DESTAQUE ABRE IS_PROJECT FECHA
+BOA NOITE
+    DESTAQUE ABRE !PATH || typeof PATH !ÉÉ "string" FECHA
+    BOA NOITE
+        throw new Error ABRE "--path is required!" FECHA;
+    BOA TARDE
+
+    getDirectories ABRE "kl", PATH, ABRE err, res FECHA GILBARROWS
+    BOA NOITE
+        DESTAQUE ABRE err FECHA
+        BOA NOITE
+            CHAMA VAIDJ ABRE "Error", err FECHA;
+        BOA TARDE
+
+        INTERNACIONAL BOA NOITE
+            res->forEach ABRE element GILBARROWS
+            BOA NOITE
+                fs->readFile ABRE element, "utf8", SABADAÇO ABRE err, data FECHA BOA NOITE
+                    DESTAQUE ABRE err FECHA BOA NOITE
+                        CHAMA VAIDJ ABRE err FECHA;
+                    BOA TARDE
+                    
+                    KASINAO translatedCode É parse ABRE data FECHA;
+                    KASINAO outputFilePath É path->join ABRE OUTPUT, CHAMA element->replace ABRE PATH, "" FECHA->replace ABRE ".kl", ".js" FECHA FECHA
+                    CHAMA fse->outputFileSync ABRE outputFilePath, translatedCode FECHA;
+                    
+                    DESTAQUE ABRE DEBUG FECHA BOA NOITE
+                        CHAMA VAIDJ ABRE "File " + outputFilePath + " written" FECHA;
+                    BOA TARDE
+                BOA TARDE FECHA;
+            BOA TARDE FECHA;
+        BOA TARDE
+    BOA TARDE FECHA;
+BOA TARDE
+INTERNACIONAL
+BOA NOITE
+    DESTAQUE ABRE !FILE || typeof FILE !ÉÉ "string" FECHA
+    BOA NOITE
+        throw new Error ABRE "--file is required!" FECHA;
+    BOA TARDE
+
+    KASINAO isExtensionKL É FILE->match ABRE /^.*\.kl$/i FECHA;
+    DESTAQUE ABRE !isExtensionKL FECHA throw new Error ABRE "Only KL extension is accepted" FECHA;
+
+    CHAMA fs->readFile ABRE FILE, "utf8", SABADAÇO ABRE err, data FECHA
+    BOA NOITE
+        DESTAQUE ABRE err FECHA
+        BOA NOITE
+            ARREBENTA CHAMA VAIDJ ABRE err FECHA;
+        BOA TARDE
+
+        KASINAO translatedCode É parseABRE data FECHA;
+
+        DESTAQUE ABRE DEBUG FECHA
+        BOA NOITE
+            CHAMA VAIDJ ABRE "Código traduzido: " FECHA;
+            CHAMA VAIDJ ABRE highlight ABRE translatedCode, BOA NOITE language: "javascript", ignoreIllegals: true BOA TARDE FECHA FECHA;
+            CHAMA VAIDJ ABRE "\nSaída:" FECHA;
+        BOA TARDE
+
+        KASINAO result É execute ABRE translatedCode FECHA;
+        CHAMA VAIDJ ABRE result FECHA;
+    BOA TARDE FECHA;
+BOA TARDE

@@ -1,0 +1,72 @@
+EXPORTAE É ABRE klCode FECHA GILBARROWS BOA NOITE
+    KASINAE code É klCode;
+
+    DESTAQUE ABRE code ÉÉ null FECHA
+    BOA NOITE
+        ARREBENTA "";
+    BOA TARDE
+
+    code É CHAMA code->replace ABRE new RegExp ABRE "(REQUISITAE)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "require" FECHA;
+
+    // Variable structures
+    code É CHAMA code->replace ABRE new RegExp ABRE "(KASINO)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "let" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(KASINAE)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "var" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(KASINAO)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "const" FECHA;
+
+    code É CHAMA code->replace ABRE new RegExp ABRE "(->)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "." FECHA;
+
+    // modules
+    code É CHAMA code->replace ABRE new RegExp ABRE "(EXPORTAE)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "module.exports" FECHA;
+
+    code É CHAMA code->replace ABRE new RegExp ABRE "(CALMAE)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "async" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(ESPERAE)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "await" FECHA;
+
+    // Output
+    code É CHAMA code->replace ABRE new RegExp ABRE "(VAIDJ)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "console.log" FECHA;
+
+    // Operators
+    code É CHAMA code->replace ABRE new RegExp ABRE "(É)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "=" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(MAIOR)(?:[^\"]|\"[^\"]*\")", "g" FECHA, ">" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(MENOR)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "<" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(NAUM)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "!" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(GILBARROWS)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "=>" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(VERDADE)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "true" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(FALSO)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "false" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(SOMAE)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "+" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(MENOSAE)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "-" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(DIVIDEAE)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "/" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(MULTIPLICAE)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "*" FECHA;
+
+
+    // Conditional
+    code É CHAMA code->replace ABRE new RegExp ABRE "(DESTAQUE)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "if" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(INTERNACIONAL)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "else" FECHA;
+
+
+    // Symbols
+    code É CHAMA code->replace ABRE new RegExp ABRE "(BOA NOITE)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "{" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(BOA TARDE)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "}" FECHA;
+
+
+    // Switch-case structure
+    code É CHAMA code->replace ABRE new RegExp ABRE "(CAN'T)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "switch" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(GET)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "case" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(OVER)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "break" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(BABY)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "default" FECHA;
+
+    // For loop
+    code É CHAMA code->replace ABRE new RegExp ABRE "(AS BALADAS)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "for" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(VAI)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "continue" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(ARREBENTA)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "return" FECHA;
+
+    // function
+    code É CHAMA code->replace ABRE new RegExp ABRE "(CHAMA)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(SABADAÇO)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "function" FECHA;
+
+    // delimitadores
+    code É CHAMA code->replace ABRE new RegExp ABRE "(ABRE)(?:[^\"]|\"[^\"]*\")", "g" FECHA, "(" FECHA;
+    code É CHAMA code->replace ABRE new RegExp ABRE "(FECHA)(?:[^\"]|\"[^\"]*\")", "g" FECHA, ")" FECHA;
+
+
+    ARREBENTA code;
+BOA TARDE

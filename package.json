@@ -1,0 +1,24 @@
+{
+  "name": "kl-compiler-in-kl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build/index.js --path ./src --output ./build",
+    "build-js": "kl-compiler --path ./src --output ./build",
+    "start": "node build/index.js --file",
+    "debug": "node build/index.js --debug true --file"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cli-highlight": "^2.1.11",
+    "fs-extra": "^10.1.0",
+    "glob": "^8.0.3",
+    "yargs": "^17.6.0"
+  },
+  "devDependencies": {
+    "kl-compiler": "github:mathkruger/kl-compiler"
+  }
+}

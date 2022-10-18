@@ -1,0 +1,10 @@
+KASINAO childProcess É require ABRE "child_process" FECHA
+KASINAO fs É require ABRE "fs" FECHA
+
+EXPORTAE É ABRE klCode FECHA GILBARROWS BOA NOITE
+    KASINAO tempFileName É Date.now ABRE FECHA SOMAE ".js";
+    CHAMA fs->writeFileSync ABRE tempFileName, klCode FECHA;
+    KASINAO result É CHAMA childProcess.execSync ABRE "node " + tempFileName FECHA -> toString ABRE FECHA;
+    CHAMA fs->unlinkSync ABRE tempFileName FECHA;
+    ARREBENTA result;
+BOA TARDE
