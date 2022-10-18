@@ -16,5 +16,6 @@
     "fs-extra": "^10.1.0",
     "glob": "^8.0.3",
     "yargs": "^17.6.0"
-  }
+  },
+  "bin": "./src/build/index.js"
 }

@@ -65,6 +65,9 @@ module.exports = ( klCode ) => {
     code =  code.replace ( new RegExp ( "(ABRE)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" ), "(" );
     code =  code.replace ( new RegExp ( "(FECHA)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" ), ")" );
 
+    // comentarios
+    code =  code.replace ( new RegExp ( "(/COMENTAÇO/)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" ), "//" );
+
 
     return code;
 }

@@ -6,23 +6,23 @@ EXPORTAE É ABRE klCode FECHA GILBARROWS BOA NOITE
         ARREBENTA "";
     BOA TARDE
 
-    // Variable structures
+    /COMENTAÇO/ Variable structures
     code É CHAMA code->replace ABRE new RegExp ABRE "(KASINO)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "let" FECHA;
     code É CHAMA code->replace ABRE new RegExp ABRE "(KASINAE)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "var" FECHA;
     code É CHAMA code->replace ABRE new RegExp ABRE "(KASINAO)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "const" FECHA;
 
     code É CHAMA code->replace ABRE new RegExp ABRE "(->)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "." FECHA;
 
-    // modules
+    /COMENTAÇO/ modules
     code É CHAMA code->replace ABRE new RegExp ABRE "(EXPORTAE)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "module.exports" FECHA;
 
     code É CHAMA code->replace ABRE new RegExp ABRE "(CALMAE)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "async" FECHA;
     code É CHAMA code->replace ABRE new RegExp ABRE "(ESPERAE)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "await" FECHA;
 
-    // Output
+    /COMENTAÇO/ Output
     code É CHAMA code->replace ABRE new RegExp ABRE "(VAIDJ)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "console.log" FECHA;
 
-    // Operators
+    /COMENTAÇO/ Operators
     code É CHAMA code->replace ABRE new RegExp ABRE "(É)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "=" FECHA;
     code É CHAMA code->replace ABRE new RegExp ABRE "(MAIOR)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, ">" FECHA;
     code É CHAMA code->replace ABRE new RegExp ABRE "(MENOR)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "<" FECHA;
@@ -36,34 +36,37 @@ EXPORTAE É ABRE klCode FECHA GILBARROWS BOA NOITE
     code É CHAMA code->replace ABRE new RegExp ABRE "(MULTIPLICAE)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "*" FECHA;
 
 
-    // Conditional
+    /COMENTAÇO/ Conditional
     code É CHAMA code->replace ABRE new RegExp ABRE "(DESTAQUE)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "if" FECHA;
     code É CHAMA code->replace ABRE new RegExp ABRE "(INTERNACIONAL)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "else" FECHA;
 
 
-    // Symbols
+    /COMENTAÇO/ Symbols
     code É CHAMA code->replace ABRE new RegExp ABRE "(BOA NOITE)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "{" FECHA;
     code É CHAMA code->replace ABRE new RegExp ABRE "(BOA TARDE)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "}" FECHA;
 
 
-    // Switch-case structure
+    /COMENTAÇO/ Switch-case structure
     code É CHAMA code->replace ABRE new RegExp ABRE "(CAN'T)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "switch" FECHA;
     code É CHAMA code->replace ABRE new RegExp ABRE "(GET)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "case" FECHA;
     code É CHAMA code->replace ABRE new RegExp ABRE "(OVER)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "break" FECHA;
     code É CHAMA code->replace ABRE new RegExp ABRE "(BABY)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "default" FECHA;
 
-    // For loop
+    /COMENTAÇO/ For loop
     code É CHAMA code->replace ABRE new RegExp ABRE "(AS BALADAS)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "for" FECHA;
     code É CHAMA code->replace ABRE new RegExp ABRE "(VAI)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "continue" FECHA;
     code É CHAMA code->replace ABRE new RegExp ABRE "(ARREBENTA)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "return" FECHA;
 
-    // function
+    /COMENTAÇO/ function
     code É CHAMA code->replace ABRE new RegExp ABRE "(CHAMA)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "" FECHA;
     code É CHAMA code->replace ABRE new RegExp ABRE "(SABADAÇO)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "function" FECHA;
 
-    // delimitadores
+    /COMENTAÇO/ delimitadores
     code É CHAMA code->replace ABRE new RegExp ABRE "(ABRE)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "(" FECHA;
     code É CHAMA code->replace ABRE new RegExp ABRE "(FECHA)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, ")" FECHA;
+
+    /COMENTAÇO/ comentarios
+    code É CHAMA code->replace ABRE new RegExp ABRE "(/COMENTAÇO/)(?=(?:[^\"]|\"[^\"]*\")*$)", "g" FECHA, "//" FECHA;
 
 
     ARREBENTA code;
