@@ -17,8 +17,12 @@ KASINAO OUTPUT É input->output;
 KASINAO DEBUG É input->debug ÉÉÉ "true" || input->debug ÉÉÉ VERDADE;
 KASINAO IS_PROJECT É !FILE && PATH;
 
-KASINAO getDirectories É SABADAÇO ABRE extension, src, callback FECHA BOA NOITE
-    CHAMA glob ABRE src SOMAE "/**/*." SOMAE extension, callback FECHA;
+KASINAO getDirectories É SABADAÇO ABRE extension, src, callback FECHA
+BOA NOITE
+    CHAMA glob ABRE
+        src SOMAE "/**/*." SOMAE extension,
+        callback
+    FECHA;
 BOA TARDE;
 
 DESTAQUE ABRE IS_PROJECT FECHA

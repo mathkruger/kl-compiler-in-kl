@@ -1,0 +1,11 @@
+KASINAO soma É 60 SOMAE 9;
+KASINAO subtracao É 78 MENOSAE 9;
+KASINAO divisao É 10 DIVIDEAE 2;
+KASINAO multiplicacao É 10 MULTIPLICAE 2;
+
+CHAMA VAIDJ ABRE
+    soma,
+    subtracao,
+    divisao,
+    multiplicacao
+FECHA
